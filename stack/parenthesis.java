@@ -32,9 +32,47 @@ public class parenthesis {
         }
        
     }
+    public static boolean isduplicate(String str){
+    Stack<Character> S = new Stack<>();
+    for (int i = 0; i < str.length(); i++) {
+        char ch = str.charAt(i);
+        //closing 
+        if(ch==')'){
+            int count = 0;
+            while(S.peek() != '('){
+                S.pop();
+                count++;
+            }
+            if(count < 1){
+                return true ;
+
+            }
+            else{
+                S.pop();
+
+            }
+        }
+        else{
+            //opening 
+            S.push(ch);
+
+        }
+       
+        
+    }
+    return false ;
+    
+
+    
+
+}
 public static void main(String[] args) {
     String str = "s90[]({)})";
     System.out.println(isValid(str));
+    // (a+(b)/c)
+   String str2 = "(a+(b)/c)";
+    System.out.println(isduplicate(str2));
+
 }
 
 }
