@@ -1,7 +1,7 @@
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
-public class nge5 {
+
+public class nge {
 
     public static int[] nge(int nums[]) {
         int n = nums.length;
